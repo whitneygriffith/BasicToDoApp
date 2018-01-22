@@ -7,8 +7,21 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  todo = []
+  item = ""
+ 
+
+
   constructor(public navCtrl: NavController) {
 
+  }
+
+  addTodo(){
+    this.todo.push(this.item);
+  }
+
+  deleteTodo(i){
+    this.todo.splice(i, 1);
   }
 
 }
